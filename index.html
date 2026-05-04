@@ -10,8 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Chart.js untuk dashboard data -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   
   <style>
     * {
@@ -298,35 +296,7 @@
     .portfolio-desc h3 { margin-bottom: 8px; }
     .portfolio-desc p { color: var(--text-muted); margin-bottom: 16px; }
 
-    /* Data Dashboard Affiliate */
-    .dashboard-section {
-      background: var(--light-bg);
-      border-radius: 48px;
-      padding: 48px;
-      margin: 48px 0;
-    }
-    .dashboard-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 32px;
-      margin-top: 32px;
-    }
-    .dashboard-card {
-      flex: 1;
-      min-width: 260px;
-      background: white;
-      border-radius: 28px;
-      padding: 28px;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--gray-border);
-    }
-    .dashboard-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 16px; }
-    .metric-number { font-size: 2.5rem; font-weight: 800; color: var(--dark); }
-    .chart-container { flex: 2; min-width: 300px; background: white; border-radius: 28px; padding: 24px; box-shadow: var(--shadow-sm); }
-    canvas#conversionChart { max-height: 250px; }
-
-    /* Contact Info Section (tanpa form) */
+    /* Contact Info Section */
     .contact-info-simple {
       background: linear-gradient(135deg, #faf7f2 0%, #ffffff 100%);
       border-radius: 48px;
@@ -376,7 +346,7 @@
       .container { padding: 0 24px; }
       .hero-content h1 { font-size: 2rem; }
       .funnel-visual { padding: 32px; }
-      .dashboard-section, .contact-info-simple { padding: 32px; }
+      .contact-info-simple { padding: 32px; }
     }
   </style>
 </head>
@@ -389,8 +359,7 @@
       <a href="#">Beranda</a>
       <a href="#funnel">Funnel</a>
       <a href="#portfolio">Portfolio</a>
-      <a href="#affiliate">Data Affiliate</a>
-      <a href="#contact" class="btn-outline" style="padding: 6px 20px;">Kontak <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact">Kontak</a>
     </div>
   </div>
 </nav>
@@ -459,49 +428,7 @@
   </div>
 </section>
 
-<!-- Data-Driven Affiliate Dashboard -->
-<section id="affiliate">
-  <div class="container">
-    <div class="dashboard-section">
-      <h2 style="font-size: 1.8rem; margin-bottom: 12px;">📊 Data-Driven Affiliate Offer</h2>
-      <p style="color: var(--text-muted); margin-bottom: 24px;">Pantau performa real-time dari rekomendasi tools funnel marketing Anda.Hasil ini tidak khas.Hasil anda dapat bervariasi tergantung pada usaha,strategi,dan pasar.Berikut adalah dashboard dinamis berdasarkan data tracking.</p>
-      
-      <div class="dashboard-grid">
-        <div class="dashboard-card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Conversion Rate</h3>
-          <div class="metric-number" id="crMetric">12.8%</div>
-          <p style="color: var(--text-muted);">↑ +2.3% vs last month</p>
-        </div>
-        <div class="dashboard-card">
-          <i class="fas fa-users"></i>
-          <h3>Active Referrals</h3>
-          <div class="metric-number" id="activeMetric">147</div>
-          <p style="color: var(--text-muted);">Unique clicks tracked</p>
-        </div>
-        <div class="dashboard-card">
-          <i class="fas fa-dollar-sign"></i>
-          <h3>Commission Earned</h3>
-          <div class="metric-number" id="commMetric">$500</div>
-          <p style="color: var(--text-muted);">30% recurring + bonuses</p>
-        </div>
-        <div class="chart-container">
-          <h3 style="margin-bottom: 16px;">Funnel Performance Trend</h3>
-          <canvas id="conversionChart"></canvas>
-        </div>
-      </div>
-
-      <div style="background: linear-gradient(135deg, var(--primary), #f59e0b); border-radius: 32px; padding: 28px; margin-top: 32px; color: white; text-align: center;">
-        <h3 style="color: white; margin-bottom: 12px;">🚀 Join ClickFunnels Affiliate Program</h3>
-        <p style="margin-bottom: 20px;">Dapatkan 30% recurring commission untuk setiap referral aktif! Saya menggunakan ClickFunnels untuk semua funnel klien saya, dan inilah rekomendasi tool terbaik untuk membangun funnel konversi tinggi.</p>
-        <a href="https://www.clickfunnels.com/signup-flow?aff=fdbe4c8a6b3c124bdc2cc710d95ab18c5bc9b943e945e3112c73fcea67e5d53b" target="_blank" class="btn-primary" style="background: white; color: var(--primary); box-shadow: 0 4px 14px rgba(0,0,0,0.1);"><i class="fab fa-clickfunnels"></i> Daftar Sekarang → Dapatkan 30% Recurring Commission</a>
-        <p style="font-size: 0.8rem; margin-top: 16px; opacity: 0.9;">Klik link di atas untuk bergabung sebagai affiliate. Setiap referral yang aktif akan memberi Anda komisi bulanan berulang!</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Info (tanpa form) -->
+<!-- Contact Info -->
 <section id="contact">
   <div class="container">
     <div class="contact-info-simple">
@@ -515,8 +442,8 @@
       <div class="social-icons">
         <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="mailto:ogisetiawan760@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/message/OZZM2R2C2QNXP1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/ogi_setiawan05/" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </div>
@@ -529,52 +456,12 @@
     <div class="social-icons" style="justify-content: center;">
       <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       <a href="mailto:ogisetiawan760@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="https://api.whatsapp.com/message/OZZM2R2C2QNXP1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/ogi_setiawan05/" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
     <p style="margin-top: 32px; font-size: 0.8rem;">© 2025 Ogi Setiawan – Funnel Marketing Specialist. Referensi dari ClickFunnels.</p>
   </div>
 </footer>
 
-<script>
-  // Data-Driven Dashboard dengan Chart.js (simulasi data tanpa form)
-  function updateDashboard() {
-    // Simulasi data referral (dinamis berdasarkan tanggal)
-    const today = new Date();
-    const dayOfMonth = today.getDate();
-    const totalReferrals = 85 + Math.floor(dayOfMonth * 2.3);
-    const conversions = Math.floor(totalReferrals * 0.18);
-    const cr = totalReferrals > 0 ? ((conversions / totalReferrals) * 100).toFixed(1) : 12.8;
-    
-    document.getElementById('crMetric').innerText = cr + '%';
-    document.getElementById('activeMetric').innerText = totalReferrals;
-    
-    // Komisi: $19.95 per referral
-    const commission = (totalReferrals * 19.95).toFixed(0);
-    document.getElementById('commMetric').innerText = '$' + commission;
-    
-    // Data chart per bulan
-    const ctx = document.getElementById('conversionChart').getContext('2d');
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun'];
-    const dataPoints = [42, 58, 71, 89, 112, totalReferrals];
-    
-    if (window.conversionChartInstance) {
-      window.conversionChartInstance.data.datasets[0].data = dataPoints;
-      window.conversionChartInstance.update();
-    } else {
-      window.conversionChartInstance = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: months,
-          datasets: [{ label: 'Referral Activity', data: dataPoints, borderColor: '#f05a28', backgroundColor: 'rgba(240,90,40,0.1)', fill: true, tension: 0.3 }]
-        },
-        options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { position: 'top' } } }
-      });
-    }
-  }
-  
-  updateDashboard();
-  setInterval(updateDashboard, 30000); // Update setiap 30 detik
-</script>
 </body>
 </html>
